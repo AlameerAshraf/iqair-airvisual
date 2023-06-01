@@ -16,6 +16,7 @@ export class AirQualityController {
     }
 
 
+    
     @Get(':lat/:lon')
     async GetAirQuality(@Param('lon') latitude: string, @Param('lat') longitude: string) {
         var iqairResult = await this.IqairServcie.GetAirQualityInfoByLocationInfo(longitude, latitude);
